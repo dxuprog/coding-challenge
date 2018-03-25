@@ -19,19 +19,23 @@
     </properties>
 
     <dependencies>
-        <!-- These are example dependencies that you can use - feel free to swap them for any other library that does the job! -->
-        <!--
+
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-csv</artifactId>
             <version>${fasterxml.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson.version}</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${fasterxml.version}</version>
         </dependency>
-        -->
+        <!--<dependency>-->
+            <!--<groupId>com.google.code.gson</groupId>-->
+            <!--<artifactId>gson</artifactId>-->
+            <!--<version>${gson.version}</version>-->
+        <!--</dependency>-->
+
 
 
 

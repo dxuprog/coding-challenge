@@ -61,3 +61,39 @@ Bonus:
 * Your code can handle gzip files as well as regular files.
 
 
+# David's submission notes:
+
+My assumptions on the data:
+```
+    /**
+     * Assumptions from implementer (David Xu):
+     *
+     * 1. Entries from the data with identical rows will be treated as duplicates.
+     *    I will be using all the values as keys. Any deviation from a single field will be treated as a different person.
+     *
+     * 2. Favorite Foods are case insensitive and have whitespace ignored.
+     *    "Steak", "steak" and "steak " will be counted as the same thing.
+     *
+     * 3. A caveat to #1 and #2. #2 will be done first when considering #1's rules about identical data. E.g.
+     * ["John", "Doe", "Steak", "4141425"] and ["John", "Doe", "steak ", "4141425"] are the same person.
+     *      I will only be loading one of these entries. The other will be tossed.
+     *
+     * 4. I'm going to assume first name and last name are always upper cased.
+     *
+     */
+```
+
+Sample run configurations:
+```
+./stats_extractor.sh ./src/main/resources/population.csv
+./stats_extractor.sh ./src/main/resources/population.json
+./stats_extractor.sh ./src/main/resources/population_large.csv.gz
+./stats_extractor.sh ./src/main/resources/population_large.json.gz
+
+./stats_extractor.sh <ABSOLUTE_PATH_TO_FILE>
+```
+
+Unit tests are also available the test directory that test basic file parsing and IO, 
+individual calculations and printing of population results.
+
+
