@@ -1,5 +1,7 @@
-import com.interset.interview.Runner;
+package com.interset.interview;
+
 import com.interset.interview.PopulationEntryDto;
+import com.interset.interview.Runner;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,7 +10,7 @@ import org.junit.Test;
 import java.util.Iterator;
 import java.util.Set;
 
-public class RunnerTestIO {
+public class RunnerIOParseTest {
 
     private Runner runner;
 

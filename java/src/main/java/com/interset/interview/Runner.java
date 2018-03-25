@@ -23,7 +23,8 @@ public class Runner {
     /**
      * Assumptions from implementer (David Xu):
      *
-     * 1. Entries from the data with identical rows will be treated as duplicates.
+     * 1. Entries from the data with identical rows will be treated as duplicates. The duplicate will not be added
+     *    otherwise it will skew data results such as favourite food counts.
      *    I will be using all the values as keys. Any deviation from a single field will be treated as a different person.
      *
      * 2. Favorite Foods are case insensitive and have whitespace ignored.

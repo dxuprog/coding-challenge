@@ -1,3 +1,5 @@
+package com.interset.interview;
+
 import com.interset.interview.PopulationCalcUtil;
 import com.interset.interview.PopulationEntryDto;
 import com.interset.interview.PopulationResult;
@@ -13,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class RunnerTestResultCalculations {
+public class RunnerResultCalculationsTest {
 
     private Runner runner;
     private Set<PopulationEntryDto> population;

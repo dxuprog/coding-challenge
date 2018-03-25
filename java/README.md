@@ -83,6 +83,11 @@ My assumptions on the data:
      */
 ```
 
+To build and run unit tests:
+```
+mvn clean package
+```
+
 Sample run configurations:
 ```
 ./stats_extractor.sh ./src/main/resources/population.csv
@@ -94,6 +99,9 @@ Sample run configurations:
 ```
 
 Unit tests are also available the test directory that test basic file parsing and IO, 
-individual calculations and printing of population results.
+individual calculations and printing of population results. To run them use:
+```
+mvn test
+```
 
 
