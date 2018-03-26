@@ -63,7 +63,7 @@ Bonus:
 
 # David's submission notes:
 
-My assumptions on the data:
+## My assumptions on the data:
 ```
     /**
      * Assumptions from implementer (David Xu):
@@ -83,13 +83,28 @@ My assumptions on the data:
      *
      */
 ```
+## Thoughts on space and performance:
 
-To build and run unit tests:
+As of now, this program works fine if the datasets can be stored into memory. Which given the test data
+it seems likely.
+
+But imagine we were trying to run this on about 7 billion entries (rough population of Earth). Given that for 50,000
+entries, the population.csv was 2.3MB. Then for 7 billion entries that's about 322GB of data.
+
+That's okay because this program can be tuned quickly to calculate the running totals of the results (I've coded it so
+each line can be summed into the PopulationResult line by line, see PopulationCalcUtil.addPopulationDtoToResult(..).
+
+However, the downfall is that this program uses a Set to detect for duplicates, which requires the data be stored
+in memory. A larger-scale de-duplication strategy would probably involve the use of a large database or distributed 
+file system to store the hashes of the data entries and references to the original data entry. This might need the raw data
+to have unique identifiers on each row.
+
+## To build and run unit tests:
 ```
 mvn clean package
 ```
 
-Sample run configurations:
+## Sample run configurations:
 ```
 ./stats_extractor.sh ./src/main/resources/population.csv
 ./stats_extractor.sh ./src/main/resources/population.json
@@ -99,6 +114,7 @@ Sample run configurations:
 ./stats_extractor.sh <ABSOLUTE_PATH_TO_FILE>
 ```
 
+## Unit testing
 Unit tests are also available the test directory that test basic file parsing and IO, 
 individual calculations and printing of population results. To run them use:
 ```
